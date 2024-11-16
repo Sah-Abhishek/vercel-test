@@ -33,7 +33,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://vishal-kr.vercel.app/"],
+    origin: '*',
     methods: ["POST", "GET"],
     credentilas: true
 }));
