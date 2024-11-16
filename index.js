@@ -21,8 +21,8 @@ import express from "express";
 import dotev from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
-import HistoryRoute from "./routes/HistoryRoute.js";
-// import authRouter from "./routes/authRouter.js";
+// import HistoryRoute from "./routes/HistoryRoute.js";
+import authRouter from "./routes/authRouter.js";
 // import dataRouter from "./routes/dataRouter.js"
 
 // Load variable from .env file
@@ -39,8 +39,8 @@ app.use(cors({
 }));
 
 // Routes
-app.use("/history", HistoryRoute);
-// app.use("/user", authRouter);
+// app.use("/history", HistoryRoute);
+app.use("/user", authRouter);
 // app.use("/home", dataRouter)
 app.get("/", (req, res) => {
   res.status(200).json({msg: "The server is up and running"})
