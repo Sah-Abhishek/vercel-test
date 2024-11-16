@@ -38,7 +38,7 @@ app.use(cors({
     credentilas: true
 }));
 
-Routes
+// Routes
 app.use("/history", HistoryRoute);
 app.use("/user", authRouter);
 app.use("/home", dataRouter)
